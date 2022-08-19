@@ -1,33 +1,142 @@
-import { useState } from 'react'
-import './App.css'
+import React, { Component } from "react";
+import $ from "jquery";
+import "./App.scss";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
-function App() {
-  const [count, setCount] = useState(0)
+class App extends Component {
 
-  return (
-    <div className="App">
+  constructor(props) {
+    super();
+    this.state = {
+      foo: "bar",
+      resumeData: {},
+      sharedData: {},
+    };
+  }
+
+  applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
+    this.swapCurrentlyActiveLanguage(oppositeLangIconId);
+    document.documentElement.lang = pickedLanguage;
+    var resumePath =
+      document.documentElement.lang === window.$primaryLanguage
+        ? `res_primaryLanguage.json`
+        : `res_secondaryLanguage.json`;
+    this.loadResumeFromPath(resumePath);
+  }
+
+  swapCurrentlyActiveLanguage(oppositeLangIconId) {
+    var pickedLangIconId =
+      oppositeLangIconId === window.$primaryLanguageIconId
+        ? window.$secondaryLanguageIconId
+        : window.$primaryLanguageIconId;
+    document
+      .getElementById(oppositeLangIconId)
+      .removeAttribute("filter", "brightness(40%)");
+    document
+      .getElementById(pickedLangIconId)
+      .setAttribute("filter", "brightness(40%)");
+  }
+
+  componentDidMount() {
+    this.loadSharedData();
+    this.applyPickedLanguage(
+      window.$primaryLanguage,
+      window.$secondaryLanguageIconId
+    );
+  }
+
+  loadResumeFromPath(path) {
+    $.ajax({
+      url: path,
+      dataType: "json",
+      cache: false,
+      success: function (data) {
+        this.setState({ resumeData: data });
+      }.bind(this),
+      error: function (xhr, status, err) {
+        alert(err);
+      },
+    });
+  }
+
+  loadSharedData() {
+    $.ajax({
+      url: `portfolio_shared_data.json`,
+      dataType: "json",
+      cache: false,
+      success: function (data) {
+        this.setState({ sharedData: data });
+        document.title = `${this.state.sharedData.basic_info.name}`;
+      }.bind(this),
+      error: function (xhr, status, err) {
+        alert(err);
+      },
+    });
+  }
+
+  render() {
+    return (
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src="https://www.springboard.com/blog/wp-content/uploads/2020/07/how-to-become-a-software-engineer-2022-career-guide.jpg" className="logo react" alt="React logo" />
-        </a>
+        <Header sharedData={this.state.sharedData.basic_info} />
+        <div className="col-md-12 mx-auto text-center language">
+          <div
+            onClick={() =>
+              this.applyPickedLanguage(
+                window.$primaryLanguage,
+                window.$secondaryLanguageIconId
+              )
+            }
+            style={{ display: "inline" }}
+          >
+            <span
+              className="iconify language-icon mr-5"
+              data-icon="twemoji-flag-for-flag-united-kingdom"
+              data-inline="false"
+              id={window.$primaryLanguageIconId}
+            ></span>
+          </div>
+          <div
+            onClick={() =>
+              this.applyPickedLanguage(
+                window.$secondaryLanguage,
+                window.$primaryLanguageIconId
+              )
+            }
+            style={{ display: "inline" }}
+          >
+            <span
+              className="iconify language-icon"
+              data-icon="twemoji-flag-for-flag-poland"
+              data-inline="false"
+              id={window.$secondaryLanguageIconId}
+            ></span>
+          </div>
+        </div>
+        <About
+          resumeBasicInfo={this.state.resumeData.basic_info}
+          sharedBasicInfo={this.state.sharedData.basic_info}
+        />
+        <Projects
+          resumeProjects={this.state.resumeData.projects}
+          resumeBasicInfo={this.state.resumeData.basic_info}
+        />
+        <Skills
+          sharedSkills={this.state.sharedData.skills}
+          resumeBasicInfo={this.state.resumeData.basic_info}
+        />
+        <Experience
+          resumeExperience={this.state.resumeData.experience}
+          resumeBasicInfo={this.state.resumeData.basic_info}
+        />
+        <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    );
+  }
 }
 
-export default App
+export default App;
