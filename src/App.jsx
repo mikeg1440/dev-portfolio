@@ -11,7 +11,7 @@ function App() {
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
-          <img src={} className="logo react" alt="React logo" />
+          <img src="https://www.springboard.com/blog/wp-content/uploads/2020/07/how-to-become-a-software-engineer-2022-career-guide.jpg" className="logo react" alt="React logo" />
         </a>
       </div>
       <h1>Vite + React</h1>
