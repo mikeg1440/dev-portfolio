@@ -2,6 +2,8 @@ body[data-theme="dark"] {
 
     @import '../src/scss/dark-slider.scss';
  
+    $dark-bg-color: #222;
+
     .slider-tab {
        background-color: #8C8C8C;
     }
@@ -20,7 +22,7 @@ body[data-theme="dark"] {
     }
  
     .language {
-       background-color: #494949;
+       background-color: $dark-bg-color;
     }
  
     .link-href {
@@ -33,7 +35,7 @@ body[data-theme="dark"] {
     }
  
     header {
-       background-color: #494949;
+       background-color: $dark-bg-color;
        h1 {
           color: white;
        }
