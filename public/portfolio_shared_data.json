@@ -5,12 +5,12 @@
       "social": [
         {
           "name": "github",
-          "url": "https://github.com",
+          "url": "https://github.com/mikeg1440/",
           "class": "fab fa-github"
         },
         {
-          "name": "instagram",
-          "url": "https://www.instagram.com",
+          "name": "Twitter",
+          "url": "https://www.twitter.com/mylogicbytes1",
           "class": "fab fa-instagram"
         }
       ],
@@ -29,8 +29,8 @@
           "level": "95"
         },
         {
-          "name": "Angular",
-          "class": "devicon-angularjs-plain",
+          "name": "react",
+          "class": "devicon-react-plain",
           "level": "80"
         },
         {
@@ -56,6 +56,11 @@
         {
           "name": "C#",
           "class": "devicon-csharp-plain",
+          "level": "65"
+        },
+        {
+          "name": "Solidity",
+          "class": "devicon-solidity-plain",
           "level": "65"
         },
         {
