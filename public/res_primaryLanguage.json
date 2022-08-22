@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "description_header": "Hi",
-      "description": "👋 I'm Michael G. Full Stack coder :) I'm working with newest front-end frameworks like React and Vue. What you are seeing now is just a template",
+      "description": "👋 I'm Michael G. Full Stack coder, a passionate freelancer bringing you programming and design from the future. I am experienced in developing web and desktop applications including full front end design. This includes brand identity, graphics and illustrations. I'm working with newest front-end and Web3 frameworks like React and ethers.js.  The single most important skill of any developer is knowing how to solve problems. From understanding how best to implement a design, fixing bugs as they occur, figuring out how to get the front-end code working together with back-end code, development is about creative problem solving. There are a number of tools and platforms like WordPress, Joomla, and Drupal that you can use for developing a websites front-end, and figuring out which tools are the best fit for particular tasks marks the difference between developing a broken website and a well-designed, scalable one. We have tried to make learning front-end web development as easy as possible, but chances are that you are still going to be stuck because you did not figure something out, or because a piece of code simply does not work.",
       "section_name": {
         "about": "About me",
         "projects": "Projects",
@@ -11,36 +11,36 @@
     },
     "projects": [
       {
-        "title": "Project 1",
+        "title": "Cyber Wave Portal",
         "startDate": "2020",
-        "description": "Description of project 1 will go here",
+        "description": "A simple DApp built with React.js and ethers.js that allows users to wave at a personal address and send a message. Each person who waves gets a chance to win some ether when they wave, each individual can win up to 3 times.",
         "images": [
-          ""
+          "https://github.com/mikeg1440/waveportal-starter-project/raw/main/assets/WavePortalDemo.gif"
         ],
-        "url": "",
+        "url": "https://github.com/mikeg1440/waveportal-starter-project",
         "technologies": [
           {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
+            "class": "devicon-react-original",
+            "name": "React"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-javascript-plain",
+            "name": "javascript"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-solidity-plain",
+            "name": "Solidity"
           }
         ]
       },
       {
-        "title": "Project 2",
-        "startDate": "2020",
-        "description": "Personal project for description of project 2",
+        "title": "PokeDAO",
+        "startDate": "2021",
+        "description": "Personal project DAO(Decentralized Autonomous Organization) used to explore the functionality of DAO's.",
         "images": [
           ""
         ],
-        "url": "https://github.com",
+        "url": "https://github.com/mikeg1440/buildspace-dao-starter",
         "technologies": [
           {
             "class": "devicon-react-original",
@@ -53,7 +53,7 @@
         ]
       },
       {
-        "title": "Project 3",
+        "title": "https://github.com/mikeg1440/ExpanseWarships",
         "startDate": "2019",
         "description": "Description of project 3 goes here",
         "images": [
@@ -62,48 +62,53 @@
         "url": "https://github.com",
         "technologies": [
           {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
+            "class": "devicon-react-plain",
+            "name": "React"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-Solidity-plain",
+            "name": "Solidity"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
           }
         ]
       }
     ],
     "experience": [
       {
-        "company": "Company 1",
+        "company": "Freelance",
         "title": "Front-End Developer",
-        "years": "10.2019 - present",
+        "years": "10.2020 - present",
         "mainTech": [
           "React.js"
         ],
         "technologies": [
+          "JavaScript",
+          "React",
           "REST API",
           "RxJS",
-          "JavaScript",
           "Bootstrap",
-          ".NET Core",
-          "SignalR",
-          "Angular Material"
+          "Solidity",
+          "SQL",
+          "PHP",
+          "C#",
+          "Python",
+          "HTML5",
+          "CSS3"
         ]
       },
       {
-        "company": "Company 2",
-        "title": "Intern",
-        "years": "01.2018 - 09.2019",
+        "company": "Playtest",
+        "title": "App Tester",
+        "years": "01.2022 - Present",
         "mainTech": [
-          "React.js"
+          "Android Apps"
         ],
         "technologies": [
-          "RxJS",
-          "DHTMLX Gantt"
+          "",
+          ""
         ]
       }
     ]
