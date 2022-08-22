@@ -2,6 +2,11 @@
 @import '../src/scss/themes/theme-light.scss';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
+$bg-light: #189AB4;
+$current-bg: $bg-light;
+
+$octo-color: #13ecaf;
+
 html {
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
@@ -38,7 +43,7 @@ header {
 	-webkit-background-size: cover;
 	text-align: center;
 	overflow: hidden;
-	background-color: #e9d5a1;
+	background-color: $current-bg;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -74,7 +79,7 @@ header {
 
 .language {
 	font-size: 25px;
-	background-color: #e9d5a1;
+	background-color: $current-bg;
 	padding-bottom: 10px;
 	padding-top: 80px;
 }
@@ -206,7 +211,7 @@ header h1 {
 
 #preview {
 	width: 500px;
-	background-color: #ebeaf5;
+	background-color: $current-bg;
 	padding: 15px;
 	position: relative;
 	margin-bottom: 15%;
@@ -219,7 +224,7 @@ header h1 {
 }
 
 #resume {
-	background: #efe1bd;
+	background: $current-bg;
 }
 
 .experience-icon {
@@ -341,7 +346,7 @@ header h1 {
 }
 
 #portfolio {
-	background: #efe1bd;
+	background: $current-bg;
 	padding-bottom: 5%;
 }
 
@@ -425,4 +430,12 @@ footer a:focus {
 .social-links {
 	margin-top: 50px;
 	font-size: 22px;
+}
+
+.octo-body {
+    color: $octo-color;
+}
+
+.octo-arm {
+    color: $octo-color;
 }
