@@ -3,6 +3,7 @@ body[data-theme="dark"] {
     @import '../src/scss/dark-slider.scss';
  
     $dark-bg-color: #222;
+    $light-bg-color: #7f7f7f;
 
     .slider-tab {
        background-color: #8C8C8C;
@@ -42,7 +43,7 @@ body[data-theme="dark"] {
     }
  
     #about {
-       background-color: #7f7f7f;
+       background-color: $light-bg-color;
        h1 span {
           color: white;
        }
