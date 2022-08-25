@@ -38,7 +38,7 @@
         "startDate": "2021",
         "description": "Personal project DAO(Decentralized Autonomous Organization) used to explore the functionality of DAO's.",
         "images": [
-          ""
+          "https://github.com/mikeg1440/my-files/blob/master/images/PokeDAO/LandingView.png?raw=true"
         ],
         "url": "https://github.com/mikeg1440/buildspace-dao-starter",
         "technologies": [
@@ -57,7 +57,7 @@
         "startDate": "2022",
         "description": "A mini turn based NFT browser game based on the show The Expanse ",
         "images": [
-          ""
+          "https://github.com/mikeg1440/my-files/raw/master/images/ExpanseWarships/LandingCropped.png?raw=true"
         ],
         "url": "https://github.com/mikeg1440/ExpanseWarships",
         "technologies": [
