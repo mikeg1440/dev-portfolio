@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
 
+import { Flip } from 'react-reveal';
+
 class Projects extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +22,7 @@ class Projects extends Component {
       var sectionName = this.props.resumeBasicInfo.section_name.projects;
       var projects = this.props.resumeProjects.map(function (projects) {
         return (
+          <Flip>
           <div
             className="col-sm-12 col-md-6 col-lg-4"
             key={projects.title}
@@ -43,6 +46,9 @@ class Projects extends Component {
               </div>
             </span>
           </div>
+
+          </Flip>
+
         );
       });
     }
