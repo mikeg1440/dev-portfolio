@@ -8,6 +8,8 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
+import { Fade, Zoom} from 'react-reveal';
+
 class App extends Component {
 
   constructor(props) {
@@ -84,20 +86,30 @@ class App extends Component {
   render() {
     return (
       <div>
+
+        <Fade>
         <Header sharedData={this.state.sharedData.basic_info} />
 
-        <About
-          resumeBasicInfo={this.state.resumeData.basic_info}
-          sharedBasicInfo={this.state.sharedData.basic_info}
-        />
+        
+        </Fade>
+
+        <Zoom>
+          <About
+            resumeBasicInfo={this.state.resumeData.basic_info}
+            sharedBasicInfo={this.state.sharedData.basic_info}
+          />
+        </Zoom>
+
         <Projects
           resumeProjects={this.state.resumeData.projects}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
+
         <Skills
-          sharedSkills={this.state.sharedData.skills}
-          resumeBasicInfo={this.state.resumeData.basic_info}
-        />
+            sharedSkills={this.state.sharedData.skills}
+            resumeBasicInfo={this.state.resumeData.basic_info}
+          />
+
         <Experience
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
