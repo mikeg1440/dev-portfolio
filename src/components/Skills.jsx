@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Zoom } from 'react-reveal';
+
 class Skills extends Component {
   render() {
     if (this.props.sharedSkills && this.props.resumeBasicInfo) {
@@ -33,7 +35,11 @@ class Skills extends Component {
             </h1>
           </div>
           <div className="col-md-12 text-center">
-            <ul className="list-inline mx-auto skill-icon">{skills}</ul>
+            <ul className="list-inline mx-auto skill-icon">
+              <Zoom>
+                {skills}
+              </Zoom>
+            </ul>
           </div>
         </div>
       </section>
