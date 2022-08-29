@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
 $bg-light: #189AB4;
+$bg-dark: #1f1f1f;
 $current-bg: $bg-light;
 
 $octo-color: #13ecaf;
@@ -12,6 +13,29 @@ html {
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
+}
+
+h1 > span {
+	color: white;
+}
+
+.foto div {
+	border-radius: 10px;
+	-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+
+.polaroid span {
+	border-radius: 10px;
+	-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+
+.card {
+	border-radius: 10px;
+	-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+
+.vertical-timeline-element-content {
+	-webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
 }
 
 .aligner {
@@ -113,7 +137,7 @@ header h1 {
 }
 
 #about {
-	background: #fff;
+	background: $bg-dark;
 	overflow: hidden;
 }
 
@@ -382,7 +406,7 @@ header h1 {
 }
 
 #skills {
-	background: #1F1F1F;
+	background: $bg-dark;
 	min-height: 200px;
 	width: 100%;
 	overflow: hidden;
@@ -407,7 +431,7 @@ header h1 {
 }
 
 footer {
-	background: #1F1F1F;
+	background: $bg-dark;
 	min-height: 100px;
 	width: 100%;
 	overflow: hidden;
