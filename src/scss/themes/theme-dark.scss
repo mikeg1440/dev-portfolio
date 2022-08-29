@@ -2,8 +2,26 @@ body[data-theme="dark"] {
 
     @import '../src/scss/dark-slider.scss';
  
-    $dark-bg-color: #222;
-    $light-bg-color: #7f7f7f;
+    $dark-bg-color: #081426;;
+    $light-bg-color: #0f2544;
+
+    $light-font-color: rgb(96, 255, 217);
+
+
+   h1 span {
+      color: $light-font-color;
+   }
+
+   footer {
+      color: $light-font-color;
+      .fab {
+         color:$light-font-color;
+      }
+   }
+
+   #home h1 {
+      color: $light-font-color;
+   }
 
     .slider-tab {
        background-color: #8C8C8C;
@@ -44,9 +62,7 @@ body[data-theme="dark"] {
  
     #about {
        background-color: $light-bg-color;
-       h1 span {
-          color: white;
-       }
+       
        .polaroid span {
           background:  #6d6d6d;
        }
@@ -57,7 +73,7 @@ body[data-theme="dark"] {
     }
  
     #portfolio {
-       background: #5b5b5b;
+       background: $dark-bg-color;
        .section-title {
           color: white !important;
        }
@@ -71,7 +87,7 @@ body[data-theme="dark"] {
  
     #resume {
        filter: brightness(80%);
-       background: #5b5b5b;
+       background: $dark-bg-color;
        .section-title {
           color: white !important;
        }
@@ -106,5 +122,13 @@ body[data-theme="dark"] {
  
     .close-icon {
        color: white;
+    }
+
+    #skills {
+      background: $light-bg-color;
+    }
+
+    footer {
+      background: $dark-bg-color;
     }
  }
