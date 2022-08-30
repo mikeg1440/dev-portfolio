@@ -52,6 +52,7 @@ class App extends Component {
       window.$primaryLanguage,
       window.$secondaryLanguageIconId
     );
+    document.body.setAttribute('data-theme', 'dark')
   }
 
   loadResumeFromPath(path) {
