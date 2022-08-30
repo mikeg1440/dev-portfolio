@@ -7,7 +7,6 @@ body[data-theme="dark"] {
 
     $light-font-color: rgb(96, 255, 217);
 
-
    h1 span {
       color: $light-font-color;
    }
@@ -49,7 +48,7 @@ body[data-theme="dark"] {
     }
  
     .project-date {
-       background-color: #918e97;
+       background-color: #0000005c;
        color: white;
     }
  
@@ -74,31 +73,42 @@ body[data-theme="dark"] {
  
     #portfolio {
        background: $dark-bg-color;
-       .section-title {
-          color: white !important;
-       }
        .foto div {
-          background: #6d6d6d;
+          background: #292929;
        }
        .project-title-settings {
-          color: white;
-       }
+         color: rgb(96, 255, 217);
+      }
+
     }
  
     #resume {
-       filter: brightness(80%);
-       background: $dark-bg-color;
-       .section-title {
-          color: white !important;
-       }
- 
-       .experience-badge {
-          background: #919191 !important;
+
+      $card-bg: #353535;
+
+      filter: brightness(80%);
+      background: $dark-bg-color;
+
+      .custom-card {
+         
+         .vertical-timeline-element-content.bounce-in {
+            background: $card-bg;
+            color: white;
+         }
+
+         .vertical-timeline-element-content-arrow {
+            border-right-color: $card-bg;
+         }
+      }
+
+
+      .experience-badge {
+          background: #1F01B9 !important;
           color: white;
        }
  
        .main-badge {
-          background: #919191 !important;
+          background: #FC440F !important;
        }
  
        .vertical-timeline-element-date {
@@ -131,4 +141,8 @@ body[data-theme="dark"] {
     footer {
       background: $dark-bg-color;
     }
+
+    .vertical-timeline-element::after {
+      background: black;
+   }
  }
