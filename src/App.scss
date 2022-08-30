@@ -99,6 +99,15 @@ header {
 	width: 100px;
 	margin: 5px 0 5px 0;
 	border-radius: 8px;
+	:hover {
+		animation: shake 2.5s linear infinite;
+	}
+}
+
+
+.list-inline-item span:hover {
+	transform: perspective(25px) rotateX(0deg) rotateY(0deg) scale(1);
+	
 }
 
 .language {
@@ -139,15 +148,6 @@ header h1 {
 #about {
 	background: $bg-dark;
 	overflow: hidden;
-}
-
-#about h1 {
-	padding-top: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color: black;
-	text-align: center;
 }
 
 .foto img {
@@ -416,11 +416,23 @@ header h1 {
 .section-title {
 	padding-top: 5%;
 	padding-bottom: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
+	font: 22px/24px 'opensans-bold', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	color: #fff;
 	text-align: center;
+	animation: neon .08s ease-in-out infinite alternate;
+}
+
+.neon-glow {
+	animation: neon .08s ease-in-out infinite alternate;
+}
+
+.flux-glow {
+	animation: flux 2s linear infinite;
+}
+
+.shake-on-hover:hover {
+	animation: shake 2s linear infinite;
 }
 
 .skill-icon {
@@ -463,3 +475,63 @@ footer a:focus {
 .octo-arm {
     color: $octo-color;
 }
+
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        filter: blur(0.018em);
+        transform: translateY(0.048em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+        filter: blur(0.01em);
+        transform: translateY(-0.048em) rotate(0deg);
+    }
+
+    20%, 60% {
+        filter: blur(0.06em);
+        transform: translate(-0.048em, 0.048em) rotate(0deg);
+    }
+
+    45%, 85% {
+        filter: blur(0.06em);
+        transform: translate(0.048em, -0.048em) rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0.014em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+
+@keyframes neon {
+	from {
+	  text-shadow:
+	  0 0 6px rgba(202,228,225,0.92),
+	  0 0 30px rgba(202,228,225,0.34),
+	  0 0 12px rgba(30,132,242,0.52),
+	  0 0 21px rgba(30,132,242,0.92),
+	  0 0 34px rgba(30,132,242,0.78),
+	  0 0 54px rgba(30,132,242,0.92);
+	}
+	to {
+	  text-shadow:
+	  0 0 6px rgba(202,228,225,0.98),
+	  0 0 30px rgba(202,228,225,0.42),
+	  0 0 12px rgba(30,132,242,0.58),
+	  0 0 22px rgba(30,132,242,0.84),
+	  0 0 38px rgba(30,132,242,0.88),
+	  0 0 60px rgba(30,132,242,1);
+	}
+  }
+
+  @keyframes flux {
+	0%,
+	100% {
+	//   text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+	  color: #28D7FE;
+	}
+	50% {
+	  text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+	}
+  }
