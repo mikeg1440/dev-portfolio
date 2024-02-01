@@ -8,51 +8,25 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
-import { Fade, Zoom} from 'react-reveal';
+import { Fade, Zoom } from "react-reveal";
 
 class App extends Component {
-
   constructor(props) {
     super();
     this.state = {
-      foo: "bar",
       resumeData: {},
       sharedData: {},
     };
   }
 
-  applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
-    // apply picked language
-    // this.swapCurrentlyActiveLanguage(oppositeLangIconId);
-    document.documentElement.lang = pickedLanguage;
+  componentDidMount() {
+    this.loadSharedData();
     var resumePath =
       document.documentElement.lang === window.$primaryLanguage
         ? `res_primaryLanguage.json`
         : `res_secondaryLanguage.json`;
     this.loadResumeFromPath(resumePath);
-  }
-
-  // make the icon for the other language active
-  // swapCurrentlyActiveLanguage(oppositeLangIconId) {
-  //   var pickedLangIconId =
-  //     oppositeLangIconId === window.$primaryLanguageIconId
-  //       ? window.$secondaryLanguageIconId
-  //       : window.$primaryLanguageIconId;
-  //   document
-  //     .getElementById(oppositeLangIconId)
-  //     .removeAttribute("filter", "brightness(40%)");
-  //   document
-  //     .getElementById(pickedLangIconId)
-  //     .setAttribute("filter", "brightness(40%)");
-  // }
-
-  componentDidMount() {
-    this.loadSharedData();
-    this.applyPickedLanguage(
-      window.$primaryLanguage,
-      window.$secondaryLanguageIconId
-    );
-    document.body.setAttribute('data-theme', 'dark')
+    document.body.setAttribute("data-theme", "dark");
   }
 
   loadResumeFromPath(path) {
@@ -76,7 +50,10 @@ class App extends Component {
       cache: false,
       success: function (data) {
         this.setState({ sharedData: data });
-        document.title = `${this.state.sharedData.basic_info && this.state.sharedData.basic_info.name}`;
+        // document.title = `${
+        //   this.state.sharedData.basic_info &&
+        //   this.state.sharedData.basic_info.name
+        // }`;
       }.bind(this),
       error: function (xhr, status, err) {
         alert(err);
@@ -87,11 +64,8 @@ class App extends Component {
   render() {
     return (
       <div>
-
         <Fade>
-        <Header sharedData={this.state.sharedData.basic_info} />
-
-        
+          <Header sharedData={this.state.sharedData.basic_info} />
         </Fade>
 
         <Zoom>
@@ -107,9 +81,9 @@ class App extends Component {
         />
 
         <Skills
-            sharedSkills={this.state.sharedData.skills}
-            resumeBasicInfo={this.state.resumeData.basic_info}
-          />
+          sharedSkills={this.state.sharedData.skills}
+          resumeBasicInfo={this.state.resumeData.basic_info}
+        />
 
         <Experience
           resumeExperience={this.state.resumeData.experience}
@@ -122,39 +96,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-// language picker code
-// <div
-// onClick={() =>
-//   this.applyPickedLanguage(
-//     window.$primaryLanguage,
-//     window.$secondaryLanguageIconId
-//   )
-// }
-// style={{ display: "inline" }}
-// >
-// <span
-//   className="iconify language-icon mr-5"
-//   data-icon="twemoji-flag-for-flag-united-kingdom"
-//   data-inline="false"
-//   id={window.$primaryLanguageIconId}
-// ></span>
-// </div>
-// <div
-// onClick={() =>
-//   this.applyPickedLanguage(
-//     window.$secondaryLanguage,
-//     window.$primaryLanguageIconId
-//   )
-// }
-// style={{ display: "inline" }}
-// >
-// <span
-//   className="iconify language-icon"
-//   data-icon="twemoji-flag-for-flag-poland"
-//   data-inline="false"
-//   id={window.$secondaryLanguageIconId}
-// ></span>
-// </div>
