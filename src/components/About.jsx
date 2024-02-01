@@ -18,18 +18,14 @@ class About extends Component {
     return (
       <section id="about">
         <div className="col-md-12">
-          <h1 className='section-title'>
+          <h1 className="section-title">
             <span>{sectionName}</span>
           </h1>
           <div className="row center mx-auto mb-5">
             <div className="col-md-4 mb-5 center">
               <div className="polaroid shake-on-hover">
                 <span style={{ cursor: "auto" }}>
-                  <img
-                    height="250px"
-                    src={profilepic}
-                    alt="Avatar placeholder"
-                  />
+                  <img src={profilepic} alt="Avatar placeholder" />
                   <Icon
                     icon={angularIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
@@ -72,7 +68,7 @@ class About extends Component {
                     className="card-body font-trebuchet text-justify ml-3 mr-3"
                     style={{
                       height: "auto",
-                      fontSize: "132%",
+                      fontSize: "2vh",
                       lineHeight: "200%",
                     }}
                   >
