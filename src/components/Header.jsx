@@ -41,7 +41,7 @@ class Header extends Component {
             <div>
               <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
               <br/>
-              <h1 className="mb-0 flux-glow">
+              <h1 className="mb-0 flux-glow name-wrapper">
                 <Typical steps={[name]} wrapper="p" />
               </h1>
               <div className="title-container">
