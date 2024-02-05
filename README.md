@@ -1,6 +1,8 @@
 ## Todo
 
 - [ ] Fix the text sizing
+- [ ] Fix the skill badge sizes
+- [ ] Get hosted on gh-pages
 - [ ] Add background to main landing section (maybe paralax)
 - [ ] Fix height of sections (set to be same a screen height)
 - [ ] Get the project modal popup working
