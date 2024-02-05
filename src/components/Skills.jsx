@@ -1,50 +1,63 @@
 import React, { Component } from "react";
+import { styled } from "styled-components";
 
-import { Zoom } from 'react-reveal';
-
-class Skills extends Component {
-  render() {
-    if (this.props.sharedSkills && this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.skills;
-      var skills = this.props.sharedSkills.icons.map(function (skills, i) {
-        return (
-          <li className="list-inline-item mx-3" key={i}>
-            <span>
-              <div className="text-center skills-tile">
-                <i className={skills.class} style={{ fontSize: "220%" }}>
-                  <p
-                    className="text-center"
-                    style={{ fontSize: "30%", marginTop: "4px" }}
-                  >
-                    {skills.name}
-                  </p>
-                </i>
-              </div>
-            </span>
-          </li>
-        );
-      });
+export default function Skills({ sharedSkills }) {
+  const renderSkills = () => {
+    if (sharedSkills) {
+      return sharedSkills.icons.map((skills, i) => (
+        <SkillBadge key={i}>
+          <i className={skills.class} style={{ fontSize: "220%" }}></i>
+          <p>{skills.name}</p>
+        </SkillBadge>
+      ));
     }
+  };
 
-    return (
-      <section id="skills">
-        <div className="col-md-12">
-          <div className="col-md-12">
-            <h1 className="section-title">
-              <span>{sectionName}</span>
-            </h1>
-          </div>
-          <div className="col-md-12 text-center">
-            <ul className="list-inline mx-auto skill-icon">
-              <Zoom>
-                {skills}
-              </Zoom>
-            </ul>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  return (
+    <section id="skills">
+      <SectionContainer>
+        <h1 className="section-title">
+          <span>Skills</span>
+        </h1>
+        <SkillsContainer>{renderSkills()}</SkillsContainer>
+      </SectionContainer>
+    </section>
+  );
 }
 
-export default Skills;
+const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+`;
+
+const SkillsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  flex-wrap: wrap;
+`;
+
+const SkillBadge = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(248, 245, 244, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  font-size: 220%;
+  margin: 1rem 3rem;
+  color: white;
+  box-shadow: -11px 17px 30px #141414, -26px 26px 30px #2a2a2a;
+}
+`;
+
+const SkillIcon = styled.i`
+  font-size: 220%;
+`;
