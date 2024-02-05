@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+      "description_header": "Hi",
+      "description": "👋 I'm Michael G. Full Stack coder, a passionate freelancer bringing you programming and design from the future. I am experienced in developing web and desktop applications including full front end design. This includes brand identity, graphics and illustrations. I'm working with newest front-end and Web3 frameworks like React and ethers.js.  The single most important skill of any developer is knowing how to solve problems. From understanding how best to implement a design, fixing bugs as they occur, figuring out how to get the front-end code working together with back-end code, development is about creative problem solving. There are a number of tools and platforms like WordPress, Joomla, and Drupal that you can use for developing a websites front-end, and figuring out which tools are the best fit for particular tasks marks the difference between developing a broken website and a well-designed, scalable one.",
+      "section_name": {
+        "about": "About me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "Cyber Wave Portal",
+        "startDate": "2020",
+        "description": "A simple DApp built with React.js and ethers.js that allows users to wave at a personal address and send a message. Each person who waves gets a chance to win some ether when they wave, each individual can win up to 3 times.",
+        "images": [
+          "https://github.com/mikeg1440/waveportal-starter-project/raw/main/assets/WavePortalDemo.gif"
+        ],
+        "url": "https://github.com/mikeg1440/waveportal-starter-project",
+        "technologies": [
+          {
+            "class": "devicon-react-original",
+            "name": "React"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "javascript"
+          },
+          {
+            "class": "devicon-solidity-plain",
+            "name": "Solidity"
+          }
+        ]
+      },
+      {
+        "title": "PokeDAO",
+        "startDate": "2021",
+        "description": "Personal project DAO(Decentralized Autonomous Organization) used to explore the functionality of DAO's.",
+        "images": [
+          "https://github.com/mikeg1440/my-files/blob/master/images/PokeDAO/LandingView.png?raw=true"
+        ],
+        "url": "https://github.com/mikeg1440/buildspace-dao-starter",
+        "technologies": [
+          {
+            "class": "devicon-react-original",
+            "name": "React"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          }
+        ]
+      },
+      {
+        "title": "Expanse Warships",
+        "startDate": "2022",
+        "description": "A mini turn based NFT browser game based on the show The Expanse ",
+        "images": [
+          "https://github.com/mikeg1440/my-files/raw/master/images/ExpanseWarships/LandingCropped.png?raw=true"
+        ],
+        "url": "https://github.com/mikeg1440/ExpanseWarships",
+        "technologies": [
+          {
+            "class": "devicon-react-plain",
+            "name": "React"
+          },
+          {
+            "class": "devicon-Solidity-plain",
+            "name": "Solidity"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Freelance",
+        "title": "Front-End Developer",
+        "years": "10.2020 - present",
+        "mainTech": [
+          "React.js"
+        ],
+        "technologies": [
+          "JavaScript",
+          "React",
+          "REST API",
+          "RxJS",
+          "Bootstrap",
+          "Solidity",
+          "SQL",
+          "PHP",
+          "C#",
+          "Python",
+          "HTML5",
+          "CSS3"
+        ]
+      },
+      {
+        "company": "Playtest",
+        "title": "App Tester",
+        "years": "01.2022 - Present",
+        "mainTech": [
+          "Android Apps"
+        ],
+        "technologies": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
